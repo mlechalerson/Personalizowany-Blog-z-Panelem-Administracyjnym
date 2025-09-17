@@ -1,0 +1,51 @@
+Personalizowany Blog z Panelem Administracyjnym 
+
+ 
+
+Opis Projektu 
+
+Głównym celem projektu jest stworzenie statycznej strony blogowej z dynamicznymi elementami i prostym panelem administracyjnym. Uczeń będzie miał za zadanie zaprojektować i zaimplementować interfejs użytkownika, który umożliwi przeglądanie wpisów, a także dodawanie nowych postów i edycję istniejących, co zilustruje podstawy tworzenia systemu zarządzania treścią (CMS). 
+
+Projekt będzie składał się z dwóch głównych części, które będą testować różne aspekty front-end developmentu: 
+
+Strona Główna Bloga i Strona Wpisu 
+
+Wyświetlanie listy postów, z których każdy będzie zawierał tytuł, datę publikacji, krótki opis i zdjęcie. 
+
+Realizacja dynamicznego ładowania danych, co oznacza, że dane będą pobierane z pliku JSON, który symuluje backend, a nie będą zakodowane na stałe w pliku HTML. 
+
+Implementacja funkcji "Czytaj więcej", która po kliknięciu wyświetli pełny wpis na oddzielnej podstronie lub w modalnym oknie, bez konieczności przeładowywania całej strony. 
+
+Stworzenie sekcji z komentarzami pod każdym wpisem, z możliwością dodawania nowych komentarzy (które będą tymczasowo przechowywane w pamięci przeglądarki). 
+
+Panel Administracyjny 
+
+Strona chroniona hasłem, na której administrator (uczeń) będzie mógł zarządzać treścią. 
+
+Formularz do dodawania nowego wpisu na bloga, z polami na tytuł, treść, link do obrazka i datę. 
+
+Implementacja funkcji edycji i usuwania istniejących wpisów. 
+
+Użycie walidacji formularza, aby upewnić się, że wszystkie wymagane pola są wypełnione poprawnie. 
+
+Aspekty techniczne 
+
+HTML5, CSS3 i JavaScript (ES6+): Logika aplikacji, manipulacja DOM, obsługa zdarzeń, asynchroniczne pobieranie danych i zarządzanie stanem aplikacji. 
+
+Lokalny magazyn (localStorage): Dane z panelu administracyjnego (nowe wpisy, edycje, usunięcia) będą tymczasowo przechowywane w pamięci przeglądarki, co pozwoli na symulację trwałego zapisu danych bez konieczności tworzenia bazy danych. 
+
+Responsywny design: Użycie media queries, elastycznych jednostek i skalowalnych obrazów, aby zapewnić, że aplikacja będzie dobrze wyglądać na różnych urządzeniach. 
+
+Cele Projektu 
+
+Praktyczne użycie JavaScriptu: Uczeń nauczy się, jak JavaScript może ożywić interfejs użytkownika, a także jak obsługiwać dane z zewnętrznych źródeł. 
+
+Zrozumienie koncepcji CMS: Projekt wprowadzi w świat tworzenia systemów do zarządzania treścią. 
+
+Walidacja danych: Rozwinie umiejętności tworzenia formularzy, które są bezpieczne i zapewniają poprawne dane wejściowe. 
+
+Pisanie czystego kodu: Zachęci do stosowania dobrych praktyk programistycznych, co jest kluczowe dla dalszej kariery. 
+
+Zarządzanie stanem aplikacji: Uczeń dowie się, jak przechowywać i aktualizować dane bez konieczności tworzenia bazy danych. 
+
+ 
