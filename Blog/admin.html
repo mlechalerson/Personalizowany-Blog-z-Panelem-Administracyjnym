@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Admina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Panel Administracyjny</h1>
+    <nav>
+      <a href="index.html">Strona główna</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="new-post-form">
+      <h2>Dodaj nowy wpis</h2>
+      <form id="post-form">
+        <label for="title">Tytuł:</label>
+        <input type="text" id="title" required>
+
+        <label for="content">Treść:</label>
+        <textarea id="content" required></textarea>
+
+        <label for="image">Link do obrazka:</label>
+        <input type="text" id="image" required>
+
+        <button type="submit">Dodaj wpis</button>
+      </form>
+    </section>
+
+    <section id="posts-list">
+      <h2>Twoje wpisy</h2>
+      <ul id="posts-ul">
+        <!-- Wpisy admina będą wyświetlane tutaj -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Blog. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
