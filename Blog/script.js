@@ -31,7 +31,7 @@ function isValidUrl(url) {
 }
 
 postForm.addEventListener('submit', function (e) {
-  e.preventDefault(); 
+  e.preventDefault();
 
   const title = titleInput.value;
   const content = contentInput.value;
