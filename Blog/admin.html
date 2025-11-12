@@ -16,8 +16,7 @@
   </header>
 
   <main>
-    <section id="new-post-form">
-      <h2>Dodaj nowy wpis</h2>
+    <section id="admin-section">
       <form id="post-form">
         <label for="title">Tytuł:</label>
         <input type="text" id="title" required>
@@ -28,15 +27,9 @@
         <label for="image">Link do obrazka:</label>
         <input type="url" id="image" placeholder="https://example.com/obrazek.jpg" required>
 
-        <button type="submit" onclick="showImage()">Dodaj wpis</button>
+        <button type="submit">Dodaj wpis</button>
       </form>
-    </section>
-
-    <section id="posts-list">
-      <h2>Twoje wpisy</h2>
-      <ul id="posts-ul">
-      
-      </ul>
+      <div id="post-list"></div>
     </section>
   </main>
 
@@ -44,6 +37,6 @@
     <p>&copy; 2025 Blog. Wszystkie prawa zastrzeżone.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="admin.js"></script>
 </body>
 </html>

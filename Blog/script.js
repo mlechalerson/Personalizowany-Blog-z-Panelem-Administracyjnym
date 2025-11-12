@@ -1,49 +1,23 @@
-const postForm = document.getElementById('post-form');
-const titleInput = document.getElementById('title');
-const contentInput = document.getElementById('content');
-const imageInput = document.getElementById('image');
-const postsList = document.getElementById('posts-ul');
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("posts-container");
 
-function addPost(title, content, image) {
-  const newPost = document.createElement('li');
-  newPost.classList.add('post-item');
+  fetch("data/posts.json")
+      .then(res => res.json())
+      .then(posts => {
+          const savedPosts = JSON.parse(localStorage.getItem("posts")) || [];
+          const allPosts = [...posts, ...savedPosts];
 
-  if (image && isValidUrl(image)) {
-    newPost.innerHTML = `
-      <h3>${title}</h3>
-      <img src="${image}" alt="${title}" style="max-width: 100%; height: auto;"/>
-      <p>${content}</p>
-    `;
-  } else {
-    newPost.innerHTML = `
-      <h3>${title}</h3>
-      <p>${content}</p>
-      <p><i>Brak obrazka - proszę wprowadzić poprawny URL</i></p>
-    `;
-  }
-
-  postsList.appendChild(newPost);
-}
-
-function isValidUrl(url) {
-  const regex = /^(ftp|http|https):\/\/[^ "]+$/;
-  return regex.test(url);
-}
-
-postForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const title = titleInput.value;
-  const content = contentInput.value;
-  const image = imageInput.value;
-
-  if (title && content && image) {
-    addPost(title, content, image);
-
-    titleInput.value = '';
-    contentInput.value = '';
-    imageInput.value = '';
-  } else {
-    alert('Proszę uzupełnić wszystkie pola.');
-  }
+          allPosts.forEach(post => {
+              const article = document.createElement("article");
+              article.innerHTML = `
+                  <img src="${post.image}" alt="${post.title}">
+                  <h2>${post.title}</h2>
+                  <p class="date">${post.date}</p>
+                  <p>${post.description}</p>
+                  <a href="post.html?id=${post.id}" class="btn">Czytaj więcej</a>
+              `;
+              container.appendChild(article);
+          });
+      })
+      .catch(err => console.error("Błąd ładowania danych:", err));
 });

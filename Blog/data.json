@@ -1,0 +1,11 @@
+[
+    {
+      "id": 1,
+      "title": "Pierwszy wpis na blogu",
+      "description": "To jest przykładowy wpis w naszym blogu.",
+      "content": "Tutaj znajduje się pełna treść przykładowego wpisu. Możesz dodać więcej akapitów, obrazków i linków.",
+      "image": "https://source.unsplash.com/random/800x400?nature",
+      "date": "2025-11-12"
+    }
+  ]
+  
