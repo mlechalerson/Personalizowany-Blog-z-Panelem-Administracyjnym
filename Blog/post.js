@@ -38,7 +38,8 @@ commentForm.addEventListener("submit", e => {
     const author = document.getElementById("author").value;
     const text = document.getElementById("text").value;
 
-    comments.push({ author, text });
+    const newComment = { author, text };
+    comments.push(newComment);
     localStorage.setItem(`comments-${postId}`, JSON.stringify(comments));
 
     commentForm.reset();

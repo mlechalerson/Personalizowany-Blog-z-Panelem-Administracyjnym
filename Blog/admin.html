@@ -16,7 +16,19 @@
   </header>
 
   <main>
-    <section id="admin-section">
+    <!-- Sekcja logowania -->
+    <section id="login-section">
+      <h2>Zaloguj się</h2>
+      <form id="login-form">
+        <label for="password">Hasło:</label>
+        <input type="password" id="password" required>
+        <button type="submit">Zaloguj się</button>
+      </form>
+    </section>
+
+    <!-- Sekcja admina (formulary do wpisywania postów) -->
+    <section id="admin-section" style="display: none;">
+      <h2>Dodaj nowy post</h2>
       <form id="post-form">
         <label for="title">Tytuł:</label>
         <input type="text" id="title" required>

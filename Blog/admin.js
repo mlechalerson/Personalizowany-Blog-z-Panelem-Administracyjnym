@@ -3,11 +3,12 @@ const PASSWORD = "admin123";
 const loginForm = document.getElementById("login-form");
 const adminSection = document.getElementById("admin-section");
 const postForm = document.getElementById("post-form");
-const postList = document.getElementById("post-list");
+const loginSection = document.getElementById("login-section");
 
 let posts = JSON.parse(localStorage.getItem("posts")) || [];
 
 function renderPosts() {
+    const postList = document.getElementById("post-list");
     postList.innerHTML = "";
     posts.forEach((p, i) => {
         const div = document.createElement("div");
@@ -25,19 +26,22 @@ function deletePost(i) {
     renderPosts();
 }
 
+// Obsługa logowania
 loginForm.addEventListener("submit", e => {
     e.preventDefault();
     const password = document.getElementById("password").value;
 
     if (password === PASSWORD) {
-        loginForm.style.display = "none";
-        adminSection.style.display = "block";
-        renderPosts();
+        // Jeśli hasło jest poprawne
+        loginSection.style.display = "none";  // Ukrywamy sekcję logowania
+        adminSection.style.display = "block"; // Pokazujemy sekcję administracyjną
+        renderPosts(); // Renderowanie postów po zalogowaniu
     } else {
         alert("Niepoprawne hasło!");
     }
 });
 
+// Obsługa formularza dodawania posta
 postForm.addEventListener("submit", e => {
     e.preventDefault();
 
